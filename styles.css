@@ -25,3 +25,21 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.fat {
+    width: 12px;
+    height: 12px;
+    -moz-transition:width: 0.1s, height 0.2s, background-color 0.2s, -moz-transform 0.2s;
+    -webkit-transition:width 0.1s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    -o-transition:width 0.1s, height 0.2s, background-color 0.2s, -o-transform 0.2s;
+    transition:width 0.1s, height 0.2s, background-color 0.2s, transform 0.2s;
+};
+
+.fat2 {
+  width: 12px;
+  height: 12px;
+    -moz-transition:width: 0.2s, height 0.2s, background-color 0.2s, -moz-transform 0.2s;
+    -webkit-transition:width 0.2s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    -o-transition:width 0.2s, height 0.2s, background-color 0.2s, -o-transform 0.2s;
+    transition:width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
+}
