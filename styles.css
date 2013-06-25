@@ -50,6 +50,14 @@ body, a:link, a:visited, a:active{
   background: lightgreen;
   position:absolute;
 }
+@-webkit-keyframes mymove /* Safari and Chrome */ {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+.farty {
+  position:absolute;
+  -webkit-animation:mymove 5s infinite;
+}
 
 .fat {
   border:15px solid yellow;

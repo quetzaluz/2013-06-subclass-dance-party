@@ -3,6 +3,8 @@
   <head>
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
@@ -11,6 +13,8 @@
     <script src="src/shyDancer.js"></script>
     <script src="src/hotdogDancer.js"></script>
     <script src="src/followingDancer.js"></script>
+    <script src="src/fartyDancer.js"></script>
+
 
   </head>
   <body>
@@ -26,11 +30,13 @@
       <a href="#" class="lineUpDancers" style="color:red;"><b>LINE UP!!!</b></a>
       <a href="#" class="shuffleDancers" style="color:lightgreen;"><b>SHUFFLE!!!</b></a>
       <a href="#" class="clusterDancers" style="color:orange;"><b>CLUSTER!!!</b></a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="FartyDancer">farty!</a>
 
     </div>
 
     <script>
       $(document).ready(function(){
+        snd = new Audio("src/fart-04.wav"); // global for now.
         window.dancers = [];
         $(".lineUpDancers").on("click", function(event){
           for (var i=0; i < window.dancers.length; i++) {
@@ -59,6 +65,9 @@
         });
         $(document).on('mouseleave', '.shy', function(event) {
           $(this).animate({'width': '2px', 'height': '2px'});
+        });
+        $(document).on('click', '.farty', function(event) {
+          snd.play();
         });
         $(".addDancerButton").on("click", function(event){
           /* This function sets up the click handlers for the create-dancer
