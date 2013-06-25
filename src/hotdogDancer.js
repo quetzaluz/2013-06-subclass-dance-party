@@ -6,7 +6,7 @@ var HotdogDancer = function(top, left, timeBetweenSteps){
   this.setPosition(this.top, this.left);
 };
 
-HotdogDancer.prototype = new Dancer();
+HotdogDancer.prototype = Object.create(Dancer.prototype);
 HotdogDancer.prototype.constructor = HotdogDancer;
 
 HotdogDancer.prototype.step = function(top, bottom){

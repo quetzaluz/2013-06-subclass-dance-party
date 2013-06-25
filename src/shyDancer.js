@@ -4,7 +4,7 @@ var ShyDancer = function(top, left, timeBetweenSteps){
   // so we must keep a copy of the old version of this function
 };
 
-ShyDancer.prototype = new Dancer();
+ShyDancer.prototype = Object.create(Dancer.prototype);
 ShyDancer.prototype.constructor = ShyDancer;
 
 ShyDancer.prototype.step = function(){

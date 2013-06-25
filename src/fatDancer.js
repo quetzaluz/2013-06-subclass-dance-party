@@ -4,7 +4,7 @@ var FatDancer = function(top, left, timeBetweenSteps){
   // so we must keep a copy of the old version of this function
 };
 
-FatDancer.prototype = new Dancer();
+FatDancer.prototype = Object.create(Dancer.prototype);
 FatDancer.prototype.constructor = FatDancer;
 
 FatDancer.prototype.step = function(){

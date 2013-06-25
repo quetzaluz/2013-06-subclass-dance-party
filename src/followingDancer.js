@@ -4,7 +4,7 @@ var FollowingDancer = function(top, left, timeBetweenSteps){
   // so we must keep a copy of the old version of this function
 };
 
-FollowingDancer.prototype = new Dancer();
+FollowingDancer.prototype = Object.create(Dancer.prototype);
 FollowingDancer.prototype.constructor = FollowingDancer;
 
 FollowingDancer.prototype.step = function(){

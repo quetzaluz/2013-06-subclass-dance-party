@@ -4,7 +4,7 @@ var FadeyDancer = function(top, left, timeBetweenSteps){
   // so we must keep a copy of the old version of this function
 };
 
-FadeyDancer.prototype = new Dancer();
+FadeyDancer.prototype = Object.create(Dancer.prototype);
 FadeyDancer.prototype.constructor = FadeyDancer;
 
 FadeyDancer.prototype.step = function(){
