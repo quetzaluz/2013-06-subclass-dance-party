@@ -5,10 +5,8 @@ var BlinkyDancer = function(top, left, timeBetweenSteps){
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
-oldStep = Dancer.prototype.step; //Bad global, fix later.
-
 BlinkyDancer.prototype.step = function(){
-  oldStep.call(this);
+  Dancer.prototype.step.call(this);
   this.$node.addClass('blinky');
   this.$node.toggle();
 };

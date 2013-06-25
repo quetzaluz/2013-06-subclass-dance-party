@@ -6,16 +6,10 @@ var FatDancer = function(top, left, timeBetweenSteps){
 
 FatDancer.prototype = new Dancer();
 FatDancer.prototype.constructor = FatDancer;
-oldStep = Dancer.prototype.step;
 
 FatDancer.prototype.step = function(){
-    // call the old version of step at the beginning of any call to this new version of step
-    oldStep.call(this);
-
-    /* toggle() is a jQuery method to show/hide the <span> tag.
-     * See http://api.jquery.com/category/effects/ for this and
-     * other effects you can use on a jQuery-wrapped html tag. */
-    this.$node.addClass('fat');
-    this.$node.animate({'width': '50px', 'height': '50px'});
-    this.$node.animate({'width': '20px', 'height': '20px'});
-  };
+  Dancer.prototype.step.call(this);
+  this.$node.addClass('fat');
+  this.$node.animate({'width': '50px', 'height': '50px'});
+  this.$node.animate({'width': '20px', 'height': '20px'});
+};

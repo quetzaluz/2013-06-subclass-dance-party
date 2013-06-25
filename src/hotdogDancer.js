@@ -8,11 +8,9 @@ var HotdogDancer = function(top, left, timeBetweenSteps){
 
 HotdogDancer.prototype = new Dancer();
 HotdogDancer.prototype.constructor = HotdogDancer;
-oldStep = Dancer.prototype.step;
 
 HotdogDancer.prototype.step = function(top, bottom){
-  // call the old version of step at the beginning of any call to this new version of step
-  oldStep.call(this);
+  Dancer.prototype.step.call(this);
   this.$node.stop(true,false);
   this.$node.css({position: 'absolute',
     left: this.left + Math.round(Math.random() * 5) - ((3 + 1) / 2) +'px', 
