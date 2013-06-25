@@ -39,6 +39,9 @@ Dancer.prototype.lineUp = function(){
 Dancer.prototype.shuffle = function(){
   this.top = $("body").height() * Math.random();
   this.left = $("body").width() * Math.random();
-  this.$node.stop(true, true).animate({'left': this.left +'px', 'top': this.top + 'px'});
-  this.setPosition(this.top, this.left);
+  this.$node.stop(true, true).animate({'left': this.left +'px', 'top': this.top + 'px'}, 500);
+};
+
+Dancer.prototype.cluster = function(){
+  //Iterate through window.dancers, use jquery .getClass
 };

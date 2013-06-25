@@ -16,6 +16,6 @@ FatDancer.prototype.step = function(){
      * See http://api.jquery.com/category/effects/ for this and
      * other effects you can use on a jQuery-wrapped html tag. */
     this.$node.addClass('fat');
-    this.$node.animate({'width': '30px', 'height': '30px'});
+    this.$node.animate({'width': '50px', 'height': '50px'});
     this.$node.animate({'width': '20px', 'height': '20px'});
   };

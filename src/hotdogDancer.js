@@ -2,7 +2,7 @@ var HotdogDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-  this.$node.html('<span class="dancer" id="hot"><img src="src/hotdogs.png"/></span>');
+  this.$node.html('<span class="dancer hot"><img src="src/hotdogs.png"/></span>');
   this.setPosition(this.top, this.left);
 };
 
