@@ -13,8 +13,8 @@ oldStep = Dancer.prototype.step;
 HotdogDancer.prototype.step = function(top, bottom){
   // call the old version of step at the beginning of any call to this new version of step
   oldStep.call(this);
-  this.$node.stop(true,false)
-  .css({position: 'absolute', 
+  this.$node.stop(true,false);
+  this.$node.css({position: 'absolute',
     left: this.left + Math.round(Math.random() * 5) - ((3 + 1) / 2) +'px', 
     top: this.top + Math.round(Math.random() * 5) - ((3) / 2) +'px'
   });

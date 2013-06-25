@@ -39,18 +39,10 @@ body, a:link, a:visited, a:active{
 
 .fat {
   border:15px solid yellow;
-  border-radius:15px;
-  transform: scale(2,2), rotate(180deg);
-  -ms-transform: scale(2,2), rotate(180deg);
-  -webkit-transform: scale(2,2), rotate(180deg);
+  border-radius:70px;
+  background: yellow;
 }
-.fat2 {
-  border:15px solid orange;
-  border-radius:15px;
-  transform: scale(1,2);
-  -ms-transform: scale(1,2);
-  -webkit-transform: scale(1,2);
-}
+
 #hot {
   position: absolute;
   border: 0;
