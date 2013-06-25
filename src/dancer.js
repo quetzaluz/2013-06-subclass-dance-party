@@ -47,3 +47,8 @@ Dancer.prototype.cluster = function(){
   this.left = ($("body").width() / 2 -200)+200* Math.random();
   this.$node.stop(true, true).animate({'left': this.left +'px', 'top': this.top + 'px'}, 500);
 };
+
+Dancer.prototype.clear = function(){
+  this.$node.remove();
+};
+

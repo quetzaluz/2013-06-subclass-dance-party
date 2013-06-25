@@ -27,9 +27,10 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="HotdogDancer">hotdogs!</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="ShyDancer">shy!</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FollowingDancer">followy!</a>
-      <a href="#" class="lineUpDancers" style="color:red;"><b>LINE UP!!!</b></a>
-      <a href="#" class="shuffleDancers" style="color:lightgreen;"><b>SHUFFLE!!!</b></a>
-      <a href="#" class="clusterDancers" style="color:orange;"><b>CLUSTER!!!</b></a>
+      <a href="#" class="lineUpDancers" style="color:red;"><b>LINE UP!</b></a>
+      <a href="#" class="shuffleDancers" style="color:lightgreen;"><b>SHUFFLE!</b></a>
+      <a href="#" class="clusterDancers" style="color:orange;"><b>CLUSTER!</b></a>
+      <a href="#" class="clearDancers" style="color:magenta"><b>CLEAR!</b></a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FartyDancer">farty!</a>
 
     </div>
@@ -47,6 +48,12 @@
           for (var i=0; i < window.dancers.length; i++) {
             window.dancers[i].shuffle();
           }
+        });
+        $(".clearDancers").on("click", function(event){
+          for (var i=0; i < window.dancers.length; i++) {
+            window.dancers[i].clear();
+          }
+          window.dancers = [];
         });
         $(".clusterDancers").on("click", function(event){
           for (var i=0; i < window.dancers.length; i++) {
