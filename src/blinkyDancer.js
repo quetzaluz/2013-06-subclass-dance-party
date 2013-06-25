@@ -1,10 +1,9 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-};  
+};
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
-makeBlinkyDancer.prototype.step = function(){
 
 oldStep = Dancer.prototype.step; //Bad global, fix later.
 

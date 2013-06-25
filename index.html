@@ -19,16 +19,23 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FadeyDancer">fadey dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FatDancer">fat dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="HotdogDancer">hotdog dancers</a>
-      <a href="#" class="lineUpDancers"><b>LINE UP DANCERS(except hotdogs)</b></a>
+      <a href="#" class="lineUpDancers"><b>LINE UP DANCERS!!!</b></a>
 
     </div>
 
     <script>
       $(document).ready(function(){
         window.dancers = [];
-
         $(".lineUpDancers").on("click", function(event){
-          $('.dancer').css({'left': '15px'});
+          //$('.dancer').animate({'left': '15px'});   //Trying to do this via method
+          for (var i=0; i < window.dancers.length; i++) {
+            console.log('Calling lineup on ' + window.dancers[i][0])
+            window.dancers[i].lineUp();
+            if (window.dancers[i][0] === "HotdogDancer") {
+              console.log('trying to move hotdogs')
+              window.dancers.step(window.dancers[i].top, 15); 
+            }
+          }
         });
 
         $(".addDancerButton").on("click", function(event){
@@ -59,7 +66,7 @@
 
           $('body').append(dancer.$node);
           window.dancers.push(dancer);
-          console.log($('.dancer'));
+          console.log(dancer);
         });
       });
     </script>
