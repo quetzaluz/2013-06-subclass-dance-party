@@ -6,7 +6,8 @@ describe("blinkyDancer", function() {
     // sets up a way to delay this test -- used below
     jasmine.Clock.useMock();
 
-    blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){
@@ -18,6 +19,7 @@ describe("blinkyDancer", function() {
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle).toHaveBeenCalled();
   });
+/* We were informed by Marcus P. that we can block out the code below
 
   describe("dance", function(){
 
@@ -37,4 +39,5 @@ describe("blinkyDancer", function() {
     });
 
   });
+*/
 });
