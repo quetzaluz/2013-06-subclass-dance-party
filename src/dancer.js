@@ -37,10 +37,8 @@ Dancer.prototype.lineUp = function(){
 };
 
 Dancer.prototype.shuffle = function(){
-  top = $("body").height() * Math.random();
-  left = $("body").width() * Math.random();
-  this.$node.stop(true, true).animate({'left': left +'px', 'top': top + 'px'});
-  this.left = left;
-  this.top = top;
+  this.top = $("body").height() * Math.random();
+  this.left = $("body").width() * Math.random();
+  this.$node.stop(true, true).animate({'left': this.left +'px', 'top': this.top + 'px'});
   this.setPosition(this.top, this.left);
 };
