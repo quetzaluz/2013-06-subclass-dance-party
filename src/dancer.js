@@ -35,3 +35,12 @@ Dancer.prototype.lineUp = function(){
   this.$node.stop(true,false).animate({'left': '15px'});
   this.left = 15;
 };
+
+Dancer.prototype.shuffle = function(){
+  top = $("body").height() * Math.random();
+  left = $("body").width() * Math.random();
+  this.$node.stop(true, true).animate({'left': left +'px', 'top': top + 'px'});
+  this.left = left;
+  this.top = top;
+  this.setPosition(this.top, this.left);
+};
