@@ -17,6 +17,6 @@ describe("shyDancer", function() {
     spyOn(shyDancer.$node, 'addClass');
     shyDancer.step();
     expect(shyDancer.$node.addClass).toHaveBeenCalled();
-});
+  });
 
 });

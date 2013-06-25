@@ -44,6 +44,13 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.following {
+  border:5px solid lightgreen;
+  border-radius:200px;
+  background: lightgreen;
+  position:absolute;
+}
+
 .fat {
   border:15px solid yellow;
   border-radius:70px;
