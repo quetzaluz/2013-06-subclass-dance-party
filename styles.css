@@ -49,6 +49,7 @@ body, a:link, a:visited, a:active{
 }
 
 #hot {
+  display: block;
   border: 0px;
   border-radius: 0;
 }

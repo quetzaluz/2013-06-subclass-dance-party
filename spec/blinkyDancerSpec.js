@@ -18,6 +18,7 @@ describe("blinkyDancer", function() {
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle).toHaveBeenCalled();
   });
+/* We were informed that we can block out the code below
 
   describe("dance", function(){
 
@@ -37,4 +38,5 @@ describe("blinkyDancer", function() {
     });
 
   });
+*/
 });
