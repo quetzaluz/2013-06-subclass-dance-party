@@ -21,25 +21,34 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  position:absolute;
+}
+
+.blinky {
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
 
 .fat {
-    width: 12px;
-    height: 12px;
-    -moz-transition:width: 0.1s, height 0.2s, background-color 0.2s, -moz-transform 0.2s;
-    -webkit-transition:width 0.1s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
-    -o-transition:width 0.1s, height 0.2s, background-color 0.2s, -o-transform 0.2s;
-    transition:width 0.1s, height 0.2s, background-color 0.2s, transform 0.2s;
-};
+  border:20px solid yellow;
+  border-radius:20px;
+  -moz-transition:border 0.1s, border-radius0.1s, -moz-transform 0.2s;
+  -webkit-transition:border 0.1s, border-radius0.1s, -moz-transform 0.2s;
+  -o-transition: border 0.1s, border-radius0.1s, -moz-transform 0.2s;
+  transition:border 0.1s, border-radius0.1s, -moz-transform 0.2s;
+}
 
 .fat2 {
-  width: 12px;
-  height: 12px;
-    -moz-transition:width: 0.2s, height 0.2s, background-color 0.2s, -moz-transform 0.2s;
-    -webkit-transition:width 0.2s, height 0.2s, background-color 0.2s, -webkit-transform 0.2s;
-    -o-transition:width 0.2s, height 0.2s, background-color 0.2s, -o-transform 0.2s;
-    transition:width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
+  border:15px solid orange;
+  border-radius:15px;
+  -moz-transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
+  -webkit-transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
+  -o-transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
+  transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
+}
+
+#hot {
+  border: 0px;
+  border-radius: 0;
 }
