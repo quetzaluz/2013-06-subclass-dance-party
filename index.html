@@ -48,10 +48,11 @@
           }
         });
         $(document).bind('mousemove', function(e){
-          $('.following').animate({
-          left:  e.pageX,
-          top:   e.pageY
-        }, 33);
+          $('.following').each(function(i) {
+           $(this).animate({
+          left:  e.pageX+(8+ Math.random()*40),
+          top:   e.pageY+(8 + Math.random()*40)
+        }, 0+(100*Math.random()))});
 });
         $(document).on('mouseover', '.shy', function(event) {
           $(this).animate({'width': '90px', 'height': '90px'});
