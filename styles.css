@@ -30,26 +30,29 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.fat {
-  border:20px solid yellow;
-  border-radius:20px;
-  -moz-transition:border 0.1s, border-radius0.1s, -moz-transform 0.2s;
-  -webkit-transition:border 0.1s, border-radius0.1s, -moz-transform 0.2s;
-  -o-transition: border 0.1s, border-radius0.1s, -moz-transform 0.2s;
-  transition:border 0.1s, border-radius0.1s, -moz-transform 0.2s;
+.shy {
+  border:5px solid green;
+  border-radius:200px;
+  background: green;
+  position:absolute;
 }
 
+.fat {
+  border:15px solid yellow;
+  border-radius:15px;
+  transform: scale(2,2), rotate(180deg);
+  -ms-transform: scale(2,2), rotate(180deg);
+  -webkit-transform: scale(2,2), rotate(180deg);
+}
 .fat2 {
   border:15px solid orange;
   border-radius:15px;
-  -moz-transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
-  -webkit-transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
-  -o-transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
-  transition:border 0.05s, border-radius0.05s, -moz-transform 0.05s;
+  transform: scale(1,2);
+  -ms-transform: scale(1,2);
+  -webkit-transform: scale(1,2);
 }
-
 #hot {
   position: absolute;
-  border: 0px;
+  border: 0;
   border-radius: 0;
 }

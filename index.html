@@ -9,6 +9,7 @@
     <script src="src/blinkyDancer.js"></script>
     <script src="src/fadeyDancer.js"></script>
     <script src="src/fatDancer.js"></script>
+    <script src="src/shyDancer.js"></script>
     <script src="src/hotdogDancer.js"></script>
   </head>
   <body>
@@ -19,6 +20,7 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FadeyDancer">fadey dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FatDancer">fat dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="HotdogDancer">hotdog dancers</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="ShyDancer">shy dancer</a>
       <a href="#" class="lineUpDancers"><b>LINE UP DANCERS!!!</b></a>
 
     </div>
@@ -27,17 +29,16 @@
       $(document).ready(function(){
         window.dancers = [];
         $(".lineUpDancers").on("click", function(event){
-          //$('.dancer').animate({'left': '15px'});   //Trying to do this via method
           for (var i=0; i < window.dancers.length; i++) {
-            console.log('Calling lineup on ' + window.dancers[i][0])
             window.dancers[i].lineUp();
-            if (window.dancers[i][0] === "HotdogDancer") {
-              console.log('trying to move hotdogs')
-              window.dancers.step(window.dancers[i].top, 15); 
-            }
           }
         });
-
+        $(document).on('mouseover', '.shy', function(event) {
+          $(this).animate({'width': '90px', 'height': '90px'});
+        });
+        $(document).on('mouseleave', '.shy', function(event) {
+          $(this).animate({'width': '2px', 'height': '2px'});
+        });
         $(".addDancerButton").on("click", function(event){
           /* This function sets up the click handlers for the create-dancer
            * buttons on index.html. You should not need to alter it.
@@ -66,7 +67,6 @@
 
           $('body').append(dancer.$node);
           window.dancers.push(dancer);
-          console.log(dancer);
         });
       });
     </script>
