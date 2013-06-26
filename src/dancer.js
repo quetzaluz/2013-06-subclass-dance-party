@@ -22,7 +22,6 @@ Dancer.prototype.step = function(){
   }, this.timeBetweenSteps);
 };
 
-
 Dancer.prototype.setPosition = function(top, left){
   var styleSettings = {
     top: top,
