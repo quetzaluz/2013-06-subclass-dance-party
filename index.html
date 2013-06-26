@@ -30,6 +30,7 @@
       <a href="#" class="lineUpDancers" style="color:red;"><b>LINE UP!</b></a>
       <a href="#" class="shuffleDancers" style="color:lightgreen;"><b>SHUFFLE!</b></a>
       <a href="#" class="clusterDancers" style="color:orange;"><b>CLUSTER!</b></a>
+      <a href="#" class="strobe" data-strobe-switch=false style="color:white"><b>STROBE!</b></a>
       <a href="#" class="clearDancers" style="color:magenta"><b>CLEAR!</b></a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FartyDancer">farty!</a>
 
@@ -44,6 +45,24 @@
             window.dancers[i].lineUp();
           }
         });
+        $(".strobe").on("click", function(event){
+          //try just toggling the effect
+          //repetitive to have two if/else pairs, combine
+          console.log('click')
+          if (!$(".strobe").data('strobe-switch')) {
+            $(".strobe").data('strobe-switch', true);
+            console.log('ON')
+            intervalID = setInterval(function () {
+              $('body').toggleClass('strobe-light');
+            }, 120);
+          } else if ($(".strobe").data('strobe-switch')) {
+            $(".strobe").data('strobe-switch', false)
+            console.log('OFF')
+            window.clearInterval(intervalID);
+            $('body').removeClass('strobe-light');
+          }
+        });
+
         $(".shuffleDancers").on("click", function(event){
           for (var i=0; i < window.dancers.length; i++) {
             window.dancers[i].shuffle();
@@ -62,11 +81,12 @@
         });
         $(document).bind('mousemove', function(e){
           $('.following').each(function(i) {
-           $(this).animate({
-          left:  e.pageX+(8+ Math.random()*40),
-          top:   e.pageY+(8 + Math.random()*40)
-        }, 0+(100*Math.random()))});
-});
+            $(this).animate({
+              left:  e.pageX+(8+ Math.random()*40),
+              top:   e.pageY+(8 + Math.random()*40)
+            }, 100*Math.random())
+          });
+        });
         $(document).on('mouseover', '.shy', function(event) {
           $(this).animate({'width': '90px', 'height': '90px'});
         });

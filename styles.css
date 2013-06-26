@@ -30,6 +30,10 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.strobe-light {
+  background: white;
+}
+
 .fadey {
   border: 10px solid magenta;
   border-radius:10px;
