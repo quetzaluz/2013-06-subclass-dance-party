@@ -48,16 +48,13 @@
         $(".strobe").on("click", function(event){
           //try just toggling the effect
           //repetitive to have two if/else pairs, combine
-          console.log('click')
           if (!$(".strobe").data('strobe-switch')) {
             $(".strobe").data('strobe-switch', true);
-            console.log('ON')
             intervalID = setInterval(function () {
               $('body').toggleClass('strobe-light');
             }, 120);
           } else if ($(".strobe").data('strobe-switch')) {
-            $(".strobe").data('strobe-switch', false)
-            console.log('OFF')
+            $(".strobe").data('strobe-switch', false);
             window.clearInterval(intervalID);
             $('body').removeClass('strobe-light');
           }

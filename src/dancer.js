@@ -10,7 +10,6 @@ var Dancer = function(top, left, timeBetweenSteps){
   // this one sets the position to some random default point within the body
   this.setPosition(this.top, this.left);
   this.step();
-
 };
 
 Dancer.prototype.step = function(){
@@ -51,3 +50,12 @@ Dancer.prototype.clear = function(){
   this.$node.remove();
 };
 
+Dancer.prototype.pairUp = function(){
+  //Iterate through all dancers, find one that is closest to object calling this method
+  var distances = {};
+  for (var i = 0; i < window.dancers.length; i++) {
+    distance = Math.sqrt(Math.pow((window.dancers[i].top - this.top), 2) + Math.pow((window.dancers[i].left - this.left),2))
+    if (distance > 0) {distances[window.dancers[i]] = distance;}
+  }
+  console.log(distances);
+};
